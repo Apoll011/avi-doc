@@ -43,6 +43,7 @@ Language Reference
 - [Infinite Loop](ref/loop.md)
 - [For Loop](ref/for.md)
 - [Return Value](ref/return.md)
+- [Skill Lifecicle](ref/lifecycle.md)
 - [Throw Exception on Error](ref/throw.md)
   - [Catch Exceptions](ref/try-catch.md)
 - [Functions](ref/functions.md)

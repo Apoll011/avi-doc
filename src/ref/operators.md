@@ -1,3 +1,7 @@
+# Operators
+
+AviScript provides a comprehensive set of operators for working with data, including standard arithmetic and logical operators, as well as custom operators designed specifically for voice assistant development.
+
 Comparison Operators
 ====================
 
@@ -251,3 +255,68 @@ let map = #{
 
 42 in -100..100 == true;            // check range for number
 ```
+
+or Operator
+===========
+
+The `or` operator provides a fallback value when the first operand is empty or undefined. It returns the first operand if it's not empty, otherwise returns the second operand.
+
+#### Syntax
+
+```python
+value1 or value2
+```
+
+#### Behavior
+
+- Returns `value1` if it's not empty (non-empty string, non-null, etc.)
+- Returns `value2` if `value1` is empty
+- Useful for providing default values
+
+#### Examples
+
+```js
+// Provide default value for empty string
+let name = "" or "Guest";
+// Result: "Guest"
+
+let name = "Alice" or "Guest";
+// Result: "Alice"
+
+// Use with user input
+let city = user::location().city or "Unknown";
+dialogue::say(`You're in ${city}`);
+
+// Chain multiple fallbacks
+let value = settings::get("theme") or constant::get("DEFAULT_THEME") or "dark";
+
+// Use with slots
+let duration = slots::get(intent, "duration") or 5;
+dialogue::say(`Setting timer for ${duration} minutes`);
+```
+
+#### Practical Use Cases
+
+```js
+// User preferences with defaults
+on_intent "greet_user" {
+    let name = user::name() or "friend";
+    let nickname = user::nickname() or name;
+    dialogue::say(`Hello, ${nickname}!`);
+}
+
+// Configuration with fallbacks
+let api_url = constant::get("API_URL") or "https://api.example.com";
+let timeout = settings::get("timeout") or 30;
+
+// Empty check in conditionals
+let location = user::location();
+let city = location.city or "your city";
+dialogue::say(`The weather in ${city} is sunny`);
+```
+
+## See Also
+
+- [Data Types](./data-types.md) - Understanding AviScript data types
+- [Control Flow](./control-flow.md) - Using operators in conditionals
+- [String Operations](./strings.md) - Working with strings
