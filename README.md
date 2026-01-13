@@ -1,7 +1,7 @@
-The Rhai Book
+The AviScript Book
 =============
 
-[_The Rhai Book_](https://rhai.rs/book) serves as Rhai's primary
+The AviScript Book serves as Avi's primary
 documentation and tutorial resource.
 
 
@@ -47,6 +47,6 @@ Settings are stored in `src/context.toml`:
 
 | Setting    | Description                                                                             |
 | ---------- | --------------------------------------------------------------------------------------- |
-| `version`  | version of Rhai                                                                         |
-| `repoHome` | points to the [root of the GitHub repo](https://github.com/rhaiscript/rhai/blob/master) |
+| `version`  | version of AviScript Script                                                             |
+| `repoHome` | points to the [root of the GitHub repo](https://github.com/apoll011/avi-doc/blob/master)|
 | `rootUrl`  | sub-directory for _The Book_, e.g. `/book`                                              |

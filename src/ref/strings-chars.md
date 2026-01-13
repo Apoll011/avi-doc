@@ -1,7 +1,7 @@
 Strings and Characters
 ======================
 
-String in Rhai contain any text sequence of valid Unicode characters.
+String in AviScript contain any text sequence of valid Unicode characters.
 
 [`type_of()`](type-of.md) a string returns `"string"`.
 
@@ -103,7 +103,7 @@ let x = "hello
 Technically speaking, there is no difficulty in allowing strings to run for multiple lines
 _without_ the continuation back-slash.
 
-Rhai forces you to manually mark a continuation with a back-slash because the ending quote is easy to omit.
+AviScript forces you to manually mark a continuation with a back-slash because the ending quote is easy to omit.
 Once it happens, the entire remainder of the script would become one giant, multi-line string.
 
 This behavior is different from Rust, where string literals can run for multiple lines.
@@ -129,7 +129,7 @@ let x = #"Hello, I am a raw string! which means that I can contain
 
 // Use more than one '#' if you happen to have '"###...' inside the string...
 
-let x = ###"In Rhai, you can write ##"hello"## as a raw string."###;
+let x = ###"In AviScript, you can write ##"hello"## as a raw string."###;
 //                                         ^^^ this is not the end of the raw string
 ```
 
@@ -199,7 +199,7 @@ Interpolation is not supported for normal string or character literals.
 statements block, including another interpolated string!
 The last result of the block is taken as the value for interpolation.
 
-Rhai uses [`to_string`](convert.md) to convert any value into a string, then physically joins all
+AviScript uses [`to_string`](convert.md) to convert any value into a string, then physically joins all
 the sub-strings together.
 
 For convenience, if any interpolated value is a [BLOB](blobs.md), however, it is automatically treated as a
@@ -256,7 +256,7 @@ _last_ character.
 
 ```admonish warning.small "Character indexing can be SLOOOOOOOOW"
 
-Internally, a Rhai string is still stored compactly as a Rust UTF-8 string in order to save memory.
+Internally, a AviScript string is still stored compactly as a Rust UTF-8 string in order to save memory.
 
 Therefore, getting the character at a particular index involves walking through the entire UTF-8
 encoded bytes stream to extract individual Unicode characters, counting them on the way.
@@ -272,7 +272,7 @@ Sub-Strings
 
 Sub-strings, or _slices_ in some programming languages, are parts of strings.
 
-In Rhai, a sub-string can be specified by indexing with a [range](ranges.md) of characters:
+In AviScript, a sub-string can be specified by indexing with a [range](ranges.md) of characters:
 
 > _string_ `[` _first character (starting from zero)_ `..` _last character (exclusive)_ `]`
 >
@@ -298,7 +298,7 @@ let age = 42;
 let record = `${full_name}: age ${age}`;
 record == "Bob C. Davis: age 42";
 
-// Unlike Rust, Rhai strings can be indexed to get a character
+// Unlike Rust, AviScript strings can be indexed to get a character
 // (disabled with 'no_index')
 let c = record[4];
 c == 'C';                               // single character
@@ -331,7 +331,7 @@ text == "Hello, Earth!";
 record += " \u2764\n";                  // escape sequence of '❤' in Unicode
 record == "Bob C. Davis: age 42 ❤\n";  // '\n' = new-line
 
-// Unlike Rust, Rhai strings can be directly modified character-by-character
+// Unlike Rust, AviScript strings can be directly modified character-by-character
 // (disabled with 'no_index')
 record[4] = '\x58'; // 0x58 = 'X'
 record == "Bob X. Davis: age 42 ❤\n";

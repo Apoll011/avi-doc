@@ -220,7 +220,7 @@ are subtle differences between the two.
 A `switch` expression matches through _hashing_ via a look-up table. Therefore, matching is very
 fast.  Walking down an [`if`-`else if`](if.md) chain is _much_ slower.
 
-On the other hand, operators can be [overloaded](overload.md) in Rhai, meaning that it is possible
+On the other hand, operators can be [overloaded](overload.md) in AviScript, meaning that it is possible
 to override the `==` operator for integers such that `x == y` returns a different result from the
 built-in default.
 

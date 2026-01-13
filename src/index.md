@@ -1,17 +1,17 @@
-The Rhai Book
+The AviScript Book
 =============
 
-{{#title The Rhai Book}}
+{{#title The AviScript Book}}
 
 {{#include links.md}}
 
-![Rhai Logo]({{rootUrl}}/images/logo/rhai-banner-transparent-colour.svg)
+![AviScript Logo]({{rootUrl}}/images/logo/rhai-banner-transparent-colour.svg)
 
-Rhai is an embedded scripting language and evaluation engine for Rust that gives a safe and easy way
+AviScript is an embedded scripting language and evaluation engine for Rust that gives a safe and easy way
 to add scripting to any application.
 
 
 Versions
 --------
 
-This Book is for version **{{version}}** of Rhai.
+This Book is for version **{{version}}** of AviScript.

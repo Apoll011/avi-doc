@@ -2,7 +2,7 @@ BLOB's
 ======
 
 BLOB's (**B**inary **L**arge **OB**jects), used to hold packed arrays of bytes, have built-in
-support in Rhai.
+support in AviScript.
 
 A BLOB has no literal representation, but is created via the `blob` function, or simply returned as
 the result of a function call (e.g. `generate_thumbnail_image` that generates a thumbnail version of

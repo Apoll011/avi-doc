@@ -33,7 +33,7 @@ Statements Block
 
 ### Syntax
 
-Statements blocks in Rhai are formed by enclosing zero or more statements within braces `{`...`}`.
+Statements blocks in AviScript are formed by enclosing zero or more statements within braces `{`...`}`.
 
 > `{` _statement_`;` _statement_`;` ... _statement_ `}`
 >

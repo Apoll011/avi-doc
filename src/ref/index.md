@@ -1,8 +1,8 @@
-Rhai Language Reference
+AviScript Language Reference
 =======================
 
-{{#title Rhai Language Reference}}
+{{#title AviScript Language Reference}}
 
-![Rhai Logo]({{rootUrl}}/images/logo/rhai-banner-transparent-colour.svg)
+![AviScript Logo]({{rootUrl}}/images/logo/rhai-banner-transparent-colour.svg)
 
-This is a stand-alone reference for the Rhai scripting language.
+This is a stand-alone reference for the AviScript scripting language.

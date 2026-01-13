@@ -179,7 +179,7 @@ for f in list {
 
 ~~~admonish danger "Prevent data races"
 
-Data races are possible in Rhai scripts.
+Data races are possible in AviScript scripts.
 
 Avoid performing a method call on a captured shared [variable](variables.md) (which essentially
 takes a mutable reference to the shared object) while using that same [variable](variables.md) as a

@@ -1,7 +1,7 @@
 Functions
 =========
 
-Rhai supports defining functions in script via the `fn` keyword.
+AviScript supports defining functions in script via the `fn` keyword.
 
 Valid function names are the same as valid [variable](variables.md) names.
 
@@ -21,7 +21,7 @@ sub(2, 3,) == -1;   // trailing comma in arguments list is OK
 
 ~~~admonish tip.small "Tip: `is_def_fn`"
 
-Use `is_def_fn` to detect if a Rhai function is defined (and therefore callable)
+Use `is_def_fn` to detect if a AviScript function is defined (and therefore callable)
 based on its name and the number of parameters (_arity_).
 
 ```rust
@@ -165,7 +165,7 @@ fn foo(x) {
 Use Before Definition Allowed
 -----------------------------
 
-Unlike C/C++, functions in Rhai can be defined _anywhere_ at global level.
+Unlike C/C++, functions in AviScript can be defined _anywhere_ at global level.
 
 A function does not need to be defined prior to being used in a script; a statement in the script
 can freely call a function defined afterwards.
@@ -186,7 +186,7 @@ Arguments are Passed by Value
 
 Functions with the same name and same _number_ of parameters are equivalent.
 
-All arguments are passed by _value_, so all Rhai script-defined functions are _pure_
+All arguments are passed by _value_, so all AviScript script-defined functions are _pure_
 (i.e. they never modify their arguments).
 
 Any update to an argument will **not** be reflected back to the caller.
@@ -203,8 +203,8 @@ change(x);
 x == 500;           // 'x' is NOT changed!
 ```
 
-```admonish warning.small "Rhai functions are pure"
+```admonish warning.small "AviScript functions are pure"
 
-The only possibility for a Rhai script-defined function to modify an external variable is
+The only possibility for a AviScript script-defined function to modify an external variable is
 via the [`this`](fn-method.md) pointer.
 ```

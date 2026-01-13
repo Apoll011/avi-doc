@@ -25,7 +25,7 @@ The following primitive value types are supported natively.
 
 ```admonish warning.small "All types are distinct"
 
-All types are treated strictly distinct by Rhai, meaning that `i32` and `i64` and `u32` are
+All types are treated strictly distinct by AviScript, meaning that `i32` and `i64` and `u32` are
 completely different. They cannot even be added together.
 
 This is very similar to Rust.
@@ -33,9 +33,9 @@ This is very similar to Rust.
 
 ```admonish info.small "Strings"
 
-[Strings](strings-chars.md) in Rhai are _immutable_, meaning that they can be shared but not modified.
+[Strings](strings-chars.md) in AviScript are _immutable_, meaning that they can be shared but not modified.
 
-Any modification done to a Rhai string causes the [string](strings-chars.md) to be cloned and
+Any modification done to a AviScript string causes the [string](strings-chars.md) to be cloned and
 the modifications made to the copy.
 ```
 

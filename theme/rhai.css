@@ -377,7 +377,7 @@ details[open].admonition > summary.admonition-title::after {
   color: var(--sidebar-fg);
 }
 
-/* Custom styles for The Rhai Book */
+/* Custom styles for The AviScript Book */
 blockquote em {
   font-family: serif;
   font-size: 110%;

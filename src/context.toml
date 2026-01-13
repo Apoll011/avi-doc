@@ -1,5 +1,5 @@
 version = "1.23.0"
-repoHome = "https://github.com/rhaiscript/rhai/blob/main"
+repoHome = "https://github.com/apoll011/avi-doc/blob/main"
 rootUrl = ""
 #rootUrl = "/book"
 #rootUrl = "/book/vnext"

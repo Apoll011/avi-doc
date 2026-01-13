@@ -16,7 +16,7 @@ let /* intruder comment */ name = "Bob";
    only makes sense that
    it is even more important */
 
-/* Fear not, Rhai satisfies all nesting needs with nested comments:
+/* Fear not, AviScript satisfies all nesting needs with nested comments:
    /*/*/*/*/**/*/*/*/*/
 */
 ```
@@ -85,7 +85,7 @@ Module Documentation
 Comment lines starting with `//!` make up the _module documentation_.
 
 They are used to document the containing [module](modules/index.md) &ndash;
-or for a Rhai script file, to document the file itself.
+or for a AviScript script file, to document the file itself.
 
 ```rust
 //! Documentation for this script file.

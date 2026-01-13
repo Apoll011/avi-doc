@@ -3,7 +3,7 @@ Licensing
 
 {{#include ../links.md}}
 
-Rhai is licensed under either of the following, at your choice:
+AviScript is licensed under either of the following, at your choice:
 
 * [Apache License, Version 2.0]({{repoHome}}/LICENSE-APACHE.txt), or
 

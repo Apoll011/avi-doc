@@ -1,4 +1,4 @@
-Features of Rhai
+Features of AviScript
 ================
 
 {{#include ../links.md}}

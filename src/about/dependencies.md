@@ -3,7 +3,7 @@ Dependencies
 
 {{#include ../links.md}}
 
-Rhai takes care to pull in as few dependencies as possible in order to avoid bloat when using the library.
+AviScript takes care to pull in as few dependencies as possible in order to avoid bloat when using the library.
 
 
 Main Dependencies
@@ -14,7 +14,7 @@ Main Dependencies
 | [`smallvec`](https://crates.io/crates/smallvec)     | `Vec` variant that stores a number of items inline            | most functions have very few parameters, and avoiding allocations result in significant performance improvement                                                                  |
 | [`thin-vec`](https://crates.io/crates/thin-vec)     | `Vec` variant that takes up only the size of a single pointer | make key `enum` types with variants that contain `Vec`'s smaller                                                                                                                 |
 | [`num-traits`](https://crates.io/crates/num-traits) | numeric traits                                                | for use with macros defining arithmetic functions and operators                                                                                                                  |
-| [`ahash`](https://crates.io/crates/ahash)           | fast hashing for data                                         | not cryptographically secure, thus faster than standard Rust hashing; Rhai does a _lot_ of hashing so this matters                                                               |
+| [`ahash`](https://crates.io/crates/ahash)           | fast hashing for data                                         | not cryptographically secure, thus faster than standard Rust hashing; AviScript does a _lot_ of hashing so this matters                                                               |
 | [`once_cell`](https://crates.io/crates/once_cell)   | global static data                                            | fixed hashing keys for [static hashing]                                                                                                                                          |
 | [`bitflags`](https://crates.io/crates/bitflags)     | bit fields                                                    | store flags in [`AST`] nodes to minimize memory usage                                                                                                                            |
 | [`smartstring`]                                     | `String` variant that stores short [strings] inline           | most [strings] in scripts (e.g. keywords, properties, symbols, variables, function names etc.) are short, and avoiding allocations result in significant performance improvement |

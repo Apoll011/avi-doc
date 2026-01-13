@@ -1,7 +1,7 @@
 Keywords
 ========
 
-The following are reserved keywords in Rhai.
+The following are reserved keywords in AviScript.
 
 | Active keywords                                                                                                            | Reserved keywords                                          | Usage                                       |
 | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------- |

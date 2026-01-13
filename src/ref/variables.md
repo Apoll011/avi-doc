@@ -5,7 +5,7 @@ Variables
 Valid Names
 -----------
 
-Variables in Rhai follow normal C naming rules &ndash; must contain only ASCII letters, digits and underscores `_`.
+Variables in AviScript follow normal C naming rules &ndash; must contain only ASCII letters, digits and underscores `_`.
 
 | Character set | Description              |
 | :-----------: | ------------------------ |
@@ -23,10 +23,10 @@ must be an ASCII letter and not a digit.
 To reduce confusion (and subtle bugs) because, for instance, `_1` can easily be misread (or mistyped)
 as `-1`.
 
-Rhai is dynamic without type checking, so there is no compiler to catch these typos.
+AviScript is dynamic without type checking, so there is no compiler to catch these typos.
 ```
 
-Therefore, some names, e.g. `_`, `_42foo`, `_1` etc., are not valid in Rhai.
+Therefore, some names, e.g. `_`, `_42foo`, `_1` etc., are not valid in AviScript.
 
 For example: `c3po` and `_r2d2_` are valid variable names, but `3abc` and `____49steps` are not.
 
@@ -36,7 +36,7 @@ Variable names also cannot be the same as a [keyword](keywords.md) (active or re
 
 ```admonish warning "Avoid names longer than 11 letters on 32-Bit"
 
-Rhai _inlines_ a string, which avoids allocations unless it is over its internal limit
+AviScript _inlines_ a string, which avoids allocations unless it is over its internal limit
 (23 ASCII characters on 64-bit, but only 11 ASCII characters on 32-bit).
 
 On 64-bit systems, _most_ variable names are shorter than 23 letters, so this is unlikely to become

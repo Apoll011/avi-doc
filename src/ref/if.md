@@ -26,7 +26,7 @@ one statement inside the branch.
 There is no ambiguity regarding which `if` clause a branch belongs to.
 
 ```rust
-// Rhai is not C!
+// AviScript is not C!
 if (decision) print(42);
 //            ^ syntax error, expecting '{'
 ```

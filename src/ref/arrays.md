@@ -1,7 +1,7 @@
 Arrays
 ======
 
-Arrays are first-class citizens in Rhai.
+Arrays are first-class citizens in AviScript.
 
 All elements stored in an array are dynamic, and the array can freely grow or shrink with elements
 added or removed.

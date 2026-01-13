@@ -205,9 +205,9 @@ if dist.tag == 1 {
 
 ### Poor-man's tuples
 
-Rhai does not have _tuples_ (nor does JavaScript in this sense).
+AviScript does not have _tuples_ (nor does JavaScript in this sense).
 
-Similar to the JavaScript situation, practical alternatives using Rhai include returning an
+Similar to the JavaScript situation, practical alternatives using AviScript include returning an
 [object map](object-maps.md) or an [array](arrays.md).
 
 Both of these alternatives, however, incur overhead that may be wasteful when the amount of

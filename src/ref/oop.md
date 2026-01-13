@@ -3,29 +3,29 @@ Object-Oriented Programming (OOP)
 
 {{#include ../links.md}}
 
-Rhai does not have _objects_ per se and is not object-oriented (in the traditional sense),
+AviScript does not have _objects_ per se and is not object-oriented (in the traditional sense),
 but it is possible to _simulate_ object-oriented programming.
 
 ```admonish question.small "To OOP or not to OOP, that is the question."
 
 Regardless of whether object-oriented programming (OOP) should be treated as a pattern or
 an _anti-pattern_ (the programming world is split 50-50 on this), there are always users who
-would like to write Rhai in "the OOP way."
+would like to write AviScript in "the OOP way."
 
 Rust itself is not object-oriented in the traditional sense; JavaScript also isn't, but that didn't
 prevent generations of programmers trying to shoehorn a class-based inheritance system onto it.
 
-So... as soon as Rhai gained in usage, way way before version 1.0, PR's started coming in to make
-it possible to write Rhai in "the OOP way."
+So... as soon as AviScript gained in usage, way way before version 1.0, PR's started coming in to make
+it possible to write AviScript in "the OOP way."
 ```
 
 
 Use Object Maps to Simulate OOP
 -------------------------------
 
-Rhai's [object maps] has [special support for OOP]({{rootUrl}}/language/object-maps-oop.md).
+AviScript's [object maps] has [special support for OOP]({{rootUrl}}/language/object-maps-oop.md).
 
-| Rhai concept                                          | Maps to OOP |
+| AviScript concept                                          | Maps to OOP |
 | ----------------------------------------------------- | :---------: |
 | [Object maps]                                         |   objects   |
 | [Object map] properties holding values                | properties  |
@@ -126,7 +126,7 @@ Some languages like JavaScript has _prototypical_ inheritance, which bases inher
 _prototype_ object.
 
 It is possible to simulate this form of inheritance using [object maps], leveraging the fact that,
-in Rhai, all values are cloned and there are no pointers. This significantly simplifies coding logic.
+in AviScript, all values are cloned and there are no pointers. This significantly simplifies coding logic.
 
 ```rust
 // Define prototype 'class'

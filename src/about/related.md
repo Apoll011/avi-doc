@@ -6,30 +6,30 @@ Related Resources
 
 ```admonish danger "Online resources"
 
-* [GitHub](https://github.com/rhaiscript) &ndash; Rhai organization
+* [GitHub](https://github.com/rhaiscript) &ndash; AviScript organization
 
 * [`rhai.rs`](https://rhai.rs) &ndash; Home website
 
-* [`crates.io`](https://crates.io/crates/rhai) &ndash; Rhai crate
+* [`crates.io`](https://crates.io/crates/rhai) &ndash; AviScript crate
 
-* [`DOCS.RS`](https://docs.rs/rhai) &ndash; Rhai API documentation
+* [`DOCS.RS`](https://docs.rs/rhai) &ndash; AviScript API documentation
 
-* [`LIB.RS`](https://lib.rs/crates/rhai) &ndash; Rhai library info
+* [`LIB.RS`](https://lib.rs/crates/rhai) &ndash; AviScript library info
 
-* [Discord Chat](https://discord.gg/HquqbYFcZ9) &ndash; Rhai channel
+* [Discord Chat](https://discord.gg/HquqbYFcZ9) &ndash; AviScript channel
 
-* [Zulip Chat](https://rhaiscript.zulipchat.com) &ndash; Rhai organization
+* [Zulip Chat](https://rhaiscript.zulipchat.com) &ndash; AviScript organization
 
-* [Reddit](https://www.reddit.com/r/Rhai) &ndash; Rhai community
+* [Reddit](https://www.reddit.com/r/AviScript) &ndash; AviScript community
 ```
 
 ```admonish tip "External tools"
 
-* [Online Playground][playground] &ndash; Run Rhai scripts directly from an editor in the browser
+* [Online Playground][playground] &ndash; Run AviScript scripts directly from an editor in the browser
 
-* [Language Server][lsp] &ndash; Language Server Protocol (LSP) server for Rhai
+* [Language Server][lsp] &ndash; Language Server Protocol (LSP) server for AviScript
 
-* [`rhai-doc`] &ndash; Rhai script documentation tool
+* [`rhai-doc`] &ndash; AviScript script documentation tool
 ```
 
 ~~~admonish note "Syntax highlighting"
@@ -37,7 +37,7 @@ Related Resources
 * [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=rhaiscript.vscode-rhai)
   &ndash; Support `.rhai` script files syntax highlighting for Visual Studio Code
 
-* [Sublime Text 3 Plugin](https://packagecontrol.io/packages/Rhai) &ndash; Support `.rhai` script
+* [Sublime Text 3 Plugin](https://packagecontrol.io/packages/AviScript) &ndash; Support `.rhai` script
   files syntax highlighting for Sublime Text 3
 
 * For other syntax highlighting purposes, e.g. `vim`, `highlight.js`, both Rust or JavaScript can be
@@ -58,7 +58,7 @@ Related Resources
 
 ```admonish abstract "Other cool projects"
 
-* [ChaiScript](http://chaiscript.com) &ndash; A strong inspiration for Rhai.
+* [ChaiScript](http://chaiscript.com) &ndash; A strong inspiration for AviScript.
   An embedded scripting language for C++.
 
 * Check out the list of [scripting languages for Rust](https://github.com/rust-unofficial/awesome-rust#scripting)

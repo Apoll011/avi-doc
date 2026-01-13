@@ -2,7 +2,7 @@ Export Variables, Functions and Sub-Modules From a Script
 =========================================================
 
 The easiest way to expose a collection of [functions](../functions.md) as a self-contained [module](index.md)
-is to do it via a Rhai script itself.
+is to do it via a AviScript script itself.
 
 The script text is evaluated.
 

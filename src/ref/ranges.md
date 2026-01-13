@@ -62,9 +62,9 @@ TL;DR
 
 ```admonish question "What happened to the _open-ended_ ranges?"
 
-Rust has _open-ended_ ranges, such as `start..`, `..end` and `..=end`.  They are not available in Rhai.
+Rust has _open-ended_ ranges, such as `start..`, `..end` and `..=end`.  They are not available in AviScript.
 
-They are not needed because Rhai can overload functions.
+They are not needed because AviScript can overload functions.
 
 Typically, an API accepting ranges as parameters would have equivalent versions that accept a
 starting position and a length (the standard `start + len` pair), as well as a versions that accept
