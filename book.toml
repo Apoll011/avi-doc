@@ -7,7 +7,7 @@ language = "en"
 [output.html]
 no-section-label = true
 additional-css = ["theme/rhai.min.css"]
-site-url = "/book/"
+site-url = "/avi-doc/book"
 git-repository-url = "https://github.com/apoll011/avi-doc"
 edit-url-template = "https://github.com/apoll011/avi-doc/edit/master/{path}"
 smart-punctuation = true
