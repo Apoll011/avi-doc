@@ -35,7 +35,7 @@ jobs:
       - name: Install mdbook-tera (v0.1.0)
         # v0.1.0 was built specifically against the mdbook 0.3/0.4 API
         run: |
-          curl -L https://github.com/avitex/mdbook-tera/releases/download/v0.5.1/mdbook-tera-x86_64-unknown-linux-gnu.tar.gz \
+          curl -L https://github.com/avitex/mdbook-tera/releases/download/v0.6.0/mdbook-tera-x86_64-unknown-linux-gnu.tar.gz \
           | tar xz
           sudo mv mdbook-tera /usr/local/bin/
 
