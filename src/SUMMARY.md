@@ -5,20 +5,6 @@ The AviScript Scripting Language
 
 ----------------------
 
-User’s Guide
-============
-
-- [Introduction](about/index.md)
-  - [Features of AviScript](about/features.md)
-  - [What AviScript Isn't](about/non-design.md)
-  - [Benchmarks](about/benchmarks.md)
-  - [Supported Targets and Builds](about/targets.md)
-  - [Dependencies](about/dependencies.md)
-  - [Licensing](about/license.md)
-  - [Related Resources](about/related.md)
-
-----------------------
-
 Language Reference
 ==================
 
@@ -65,6 +51,24 @@ Language Reference
   - [Function Pointers](ref/fn-ptr.md)
   - [Closures](ref/fn-closure.md)
   - [Metadata](ref/fn-metadata.md)
+- [Built-in Modules](ref/builtin/index.md)
+  - [Array](ref/builtin/array.md)
+  - [Constant](ref/builtin/constant.md)
+  - [Context](ref/builtin/context.md)
+  - [Dialogue](ref/builtin/dialogue.md)
+  - [Filesystem](ref/builtin/fs.md)
+  - [Global](ref/builtin/global.md)
+  - [JSON](ref/builtin/json.md)
+  - [Locale](ref/builtin/locale.md)
+  - [Log](ref/builtin/log.md)
+  - [Machine Learning](ref/builtin/ml.md)
+  - [Random](ref/builtin/rand.md)
+  - [Settings](ref/builtin/settings.md)
+  - [Skill](ref/builtin/skill.md)
+  - [Slots](ref/builtin/slots.md)
+  - [URL](ref/builtin/url.md)
+  - [User](ref/builtin/user.md)
+  - [Utilities](ref/builtin/util.md)
 - [Print and Debug](ref/print-debug.md)
 - [Modules](ref/modules/index.md)
   - [Export Variables, Functions and Sub-Modules from Script](ref/modules/export.md)

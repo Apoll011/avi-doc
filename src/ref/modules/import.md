@@ -16,9 +16,10 @@ A [module](index.md) can be _imported_ via the `import` statement, and be given 
 Its members can be accessed via `::` similar to C++.
 
 ```js
-import "crypto_banner";         // run the script file 'crypto_banner.rhai' without creating an imported module
+use "crypto_banner";         // run the script file 'crypto_banner.rhai' without creating an imported module
 
 import "crypto" as lock;        // run the script file 'crypto.rhai' and import it as a module named 'lock'
+import "crypto";        // run the script file 'crypto.rhai' and import it as a module named 'crypto'
 
 const SECRET_NUMBER = 42;
 

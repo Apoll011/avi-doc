@@ -185,7 +185,7 @@ fn int.change_value(offset) {
 │ main.rhai │
 └───────────┘
 
-import "my_module";
+use "my_module";
 
 let x = 42;
 
