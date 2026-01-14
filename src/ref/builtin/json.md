@@ -16,18 +16,18 @@ Parses a JSON string into a Rhai object.
 #### Signature
 
 ```rhai
-fn parse(json_str: String) -> ?
+fn parse(json_str: ImutableString) -> ?
 ```
 
 #### Parameters
 
 | Parameter  | Type     | Description              |
 |------------|----------|--------------------------|
-| `json_str` | `String` | The JSON string to parse |
+| `json_str` | `ImutableString` | The JSON string to parse |
 
 #### Returns
 
-- A Rhai object (Map, Array, String, Number, Bool) representing the JSON data
+- A Rhai object (Map, Array, ImutableString, Number, Bool) representing the JSON data
 - Throws an error if the JSON is invalid
 
 #### Examples
@@ -58,7 +58,7 @@ Converts a Rhai object into a pretty-printed JSON string.
 #### Signature
 
 ```rhai
-fn to_json(value: ?) -> String
+fn to_json(value: ?) -> ImutableString
 ```
 
 #### Parameters
@@ -69,7 +69,7 @@ fn to_json(value: ?) -> String
 
 #### Returns
 
-- `String` - A pretty-printed JSON string
+- `ImutableString` - A pretty-printed JSON string
 
 #### Examples
 

@@ -18,7 +18,7 @@ Gets the value of a slot from the current intent.
 #### Signature
 
 ```rhai
-fn get(intent: Intent, name: String) -> ?
+fn get(intent: Intent, name: ImutableString) -> ?
 ```
 
 #### Parameters
@@ -26,7 +26,7 @@ fn get(intent: Intent, name: String) -> ?
 | Parameter | Type     | Description                    |
 |-----------|----------|--------------------------------|
 | `intent`  | `Intent` | The intent to check            |
-| `name`    | `String` | The name of the slot           |
+| `name`    | `ImutableString` | The name of the slot           |
 
 #### Returns
 
@@ -53,7 +53,7 @@ Gets the raw text value of a slot from the current intent.
 #### Signature
 
 ```rhai
-fn get_raw(intent: Intent, name: String) -> ?
+fn get_raw(intent: Intent, name: ImutableString) -> ?
 ```
 
 #### Parameters
@@ -61,7 +61,7 @@ fn get_raw(intent: Intent, name: String) -> ?
 | Parameter | Type     | Description                    |
 |-----------|----------|--------------------------------|
 | `intent`  | `Intent` | The intent to check            |
-| `name`    | `String` | The name of the slot           |
+| `name`    | `ImutableString` | The name of the slot           |
 
 #### Returns
 
@@ -86,7 +86,7 @@ Gets the full slot object from the current intent.
 #### Signature
 
 ```rhai
-fn full(intent: Intent, name: String) -> ?
+fn full(intent: Intent, name: ImutableString) -> ?
 ```
 
 #### Parameters
@@ -94,7 +94,7 @@ fn full(intent: Intent, name: String) -> ?
 | Parameter | Type     | Description                    |
 |-----------|----------|--------------------------------|
 | `intent`  | `Intent` | The intent to check            |
-| `name`    | `String` | The name of the slot           |
+| `name`    | `ImutableString` | The name of the slot           |
 
 #### Returns
 
@@ -121,7 +121,7 @@ Checks if a slot exists in the current intent.
 #### Signature
 
 ```rhai
-fn exists(intent: Intent, name: String) -> bool
+fn exists(intent: Intent, name: ImutableString) -> bool
 ```
 
 #### Parameters
@@ -129,7 +129,7 @@ fn exists(intent: Intent, name: String) -> bool
 | Parameter | Type     | Description                    |
 |-----------|----------|--------------------------------|
 | `intent`  | `Intent` | The intent to check            |
-| `name`    | `String` | The name of the slot           |
+| `name`    | `ImutableString` | The name of the slot           |
 
 #### Returns
 
@@ -157,7 +157,7 @@ Asserts that a slot exists in the current intent. Throws an error if the slot is
 #### Signature
 
 ```rhai
-fn require(intent: Intent, name: String)
+fn require(intent: Intent, name: ImutableString)
 ```
 
 #### Parameters
@@ -165,7 +165,7 @@ fn require(intent: Intent, name: String)
 | Parameter | Type     | Description                    |
 |-----------|----------|--------------------------------|
 | `intent`  | `Intent` | The intent to check            |
-| `name`    | `String` | The name of the slot           |
+| `name`    | `ImutableString` | The name of the slot           |
 
 #### Returns
 
@@ -193,7 +193,7 @@ Asserts that a slot's value is equal to a given value.
 #### Signature
 
 ```rhai
-fn assert_equal(intent: Intent, name: String, val: ?) -> bool
+fn assert_equal(intent: Intent, name: ImutableString, val: ?) -> bool
 ```
 
 #### Parameters
@@ -201,7 +201,7 @@ fn assert_equal(intent: Intent, name: String, val: ?) -> bool
 | Parameter | Type     | Description                    |
 |-----------|----------|--------------------------------|
 | `intent`  | `Intent` | The intent to check            |
-| `name`    | `String` | The name of the slot           |
+| `name`    | `ImutableString` | The name of the slot           |
 | `val`     | `?`      | The value to compare against   |
 
 #### Returns
@@ -229,7 +229,7 @@ Asserts that a slot's value is in a given list or matches a value.
 #### Signature
 
 ```rhai
-fn assert_in(intent: Intent, name: String, list: ?) -> bool
+fn assert_in(intent: Intent, name: ImutableString, list: ?) -> bool
 ```
 
 #### Parameters
@@ -237,7 +237,7 @@ fn assert_in(intent: Intent, name: String, list: ?) -> bool
 | Parameter | Type     | Description                                      |
 |-----------|----------|--------------------------------------------------|
 | `intent`  | `Intent` | The intent to check                              |
-| `name`    | `String` | The name of the slot                             |
+| `name`    | `ImutableString` | The name of the slot                             |
 | `list`    | `?`      | The list of values or a single value to check    |
 
 #### Returns
@@ -269,7 +269,7 @@ Asserts that a slot's string value is a key in a given map.
 #### Signature
 
 ```rhai
-fn assert_in_dict(intent: Intent, name: String, dict: ?) -> bool
+fn assert_in_dict(intent: Intent, name: ImutableString, dict: ?) -> bool
 ```
 
 #### Parameters
@@ -277,7 +277,7 @@ fn assert_in_dict(intent: Intent, name: String, dict: ?) -> bool
 | Parameter | Type     | Description                    |
 |-----------|----------|--------------------------------|
 | `intent`  | `Intent` | The intent to check            |
-| `name`    | `String` | The name of the slot           |
+| `name`    | `ImutableString` | The name of the slot           |
 | `dict`    | `?`      | The map to check for the key   |
 
 #### Returns

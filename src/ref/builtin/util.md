@@ -16,7 +16,7 @@ Gets the current operating system name.
 #### Signature
 
 ```rhai
-fn os() -> String
+fn os() -> ImutableString
 ```
 
 #### Parameters
@@ -25,7 +25,7 @@ None
 
 #### Returns
 
-- `String` - The OS name (e.g., "linux", "windows", "macos")
+- `ImutableString` - The OS name (e.g., "linux", "windows", "macos")
 
 #### Examples
 
@@ -49,19 +49,19 @@ Gets an environment variable with a default fallback.
 #### Signature
 
 ```rhai
-fn env(name: String, default: String) -> String
+fn env(name: ImutableString, default: ImutableString) -> ImutableString
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                                      |
 |-----------|----------|--------------------------------------------------|
-| `name`    | `String` | The name of the environment variable             |
-| `default` | `String` | The default value if the variable is not set     |
+| `name`    | `ImutableString` | The name of the environment variable             |
+| `default` | `ImutableString` | The default value if the variable is not set     |
 
 #### Returns
 
-- `String` - The environment variable value, or the default if not found
+- `ImutableString` - The environment variable value, or the default if not found
 
 #### Examples
 
@@ -82,14 +82,14 @@ Executes a shell command and returns the exit code.
 #### Signature
 
 ```rhai
-fn cmd(command: String) -> int
+fn cmd(command: ImutableString) -> int
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                  |
 |-----------|----------|------------------------------|
-| `command` | `String` | The command to execute       |
+| `command` | `ImutableString` | The command to execute       |
 
 #### Returns
 
@@ -132,7 +132,7 @@ Asserts a condition, throwing an error if the condition is true.
 #### Signature
 
 ```rhai
-fn assert(condition: bool, msg: String)
+fn assert(condition: bool, msg: ImutableString)
 ```
 
 #### Parameters
@@ -140,7 +140,7 @@ fn assert(condition: bool, msg: String)
 | Parameter   | Type     | Description                            |
 |-------------|----------|----------------------------------------|
 | `condition` | `bool`   | If true, an error will be thrown       |
-| `msg`       | `String` | The error message to use               |
+| `msg`       | `ImutableString` | The error message to use               |
 
 #### Returns
 
@@ -174,7 +174,7 @@ Generates a new UUID v4.
 #### Signature
 
 ```rhai
-fn uuid() -> String
+fn uuid() -> ImutableString
 ```
 
 #### Parameters
@@ -183,7 +183,7 @@ None
 
 #### Returns
 
-- `String` - A UUID string in the format "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+- `ImutableString` - A UUID string in the format "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 
 #### Examples
 
@@ -206,7 +206,7 @@ Converts a byte array to a string. Commonly used when receiving data from messag
 #### Signature
 
 ```rhai
-fn get_string(bytes: Array) -> String
+fn get_string(bytes: Array) -> ImutableString
 ```
 
 #### Parameters
@@ -217,7 +217,7 @@ fn get_string(bytes: Array) -> String
 
 #### Returns
 
-- `String` - The decoded string
+- `ImutableString` - The decoded string
 
 #### Examples
 

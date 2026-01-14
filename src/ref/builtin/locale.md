@@ -18,7 +18,7 @@ Returns the currently active language code for the skill.
 #### Signature
 
 ```rust
-fn current() -> String
+fn current() -> ImutableString
 ```
 
 #### Parameters
@@ -27,7 +27,7 @@ None
 
 #### Returns
 
-- `String` - The current language code in IETF BCP 47 format (e.g., `"en-US"`, `"pt-BR"`, `"es-ES"`)
+- `ImutableString` - The current language code in IETF BCP 47 format (e.g., `"en-US"`, `"pt-BR"`, `"es-ES"`)
 
 #### Behavior
 
@@ -104,18 +104,18 @@ Retrieves a translation string for the given ID in the current locale.
 #### Signature
 
 ```rust
-fn get(id: String) -> String
+fn get(id: ImutableString) -> ImutableString
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                           |
 |-----------|----------|---------------------------------------|
-| `id`      | `String` | The translation key/ID to retrieve    |
+| `id`      | `ImutableString` | The translation key/ID to retrieve    |
 
 #### Returns
 
-- `String` - The translated text if found
+- `ImutableString` - The translated text if found
 - `UNIT` - If the translation ID does not exist
 
 #### Behavior
@@ -186,19 +186,19 @@ Retrieves and formats a translation string with parameter interpolation.
 #### Signature
 
 ```rust
-fn get_fmt(id: String, params: Map) -> String
+fn get_fmt(id: ImutableString, params: Map) -> ImutableString
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                                    |
 |-----------|----------|------------------------------------------------|
-| `id`      | `String` | The translation key/ID to retrieve             |
+| `id`      | `ImutableString` | The translation key/ID to retrieve             |
 | `params`  | `Map`    | Key-value pairs for parameter substitution     |
 
 #### Returns
 
-- `String` - The formatted translation with parameters substituted
+- `ImutableString` - The formatted translation with parameters substituted
 - `UNIT` - If the translation ID does not exist
 
 #### Behavior
@@ -308,14 +308,14 @@ Checks if a translation exists for the given ID in the current locale.
 #### Signature
 
 ```rust
-fn has(id: String) -> bool
+fn has(id: ImutableString) -> bool
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                     |
 |-----------|----------|---------------------------------|
-| `id`      | `String` | The translation key/ID to check |
+| `id`      | `ImutableString` | The translation key/ID to check |
 
 #### Returns
 
@@ -418,14 +418,14 @@ Returns all translation entries for a specific locale code.
 #### Signature
 
 ```rust
-fn list(code: String) -> Map
+fn list(code: ImutableString) -> Map
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                            |
 |-----------|----------|----------------------------------------|
-| `code`    | `String` | The locale code (e.g., `"en-US"`)      |
+| `code`    | `ImutableString` | The locale code (e.g., `"en-US"`)      |
 
 #### Returns
 

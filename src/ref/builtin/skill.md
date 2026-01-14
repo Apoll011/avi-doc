@@ -16,7 +16,7 @@ Gets the root directory of the current skill.
 #### Signature
 
 ```rhai
-fn dir() -> String
+fn dir() -> ImutableString
 ```
 
 #### Parameters
@@ -25,7 +25,7 @@ None
 
 #### Returns
 
-- `String` - The absolute path to the skill's root directory
+- `ImutableString` - The absolute path to the skill's root directory
 
 #### Examples
 
@@ -142,7 +142,7 @@ Gets the version of the current skill.
 #### Signature
 
 ```rhai
-fn version() -> String
+fn version() -> ImutableString
 ```
 
 #### Parameters
@@ -151,7 +151,7 @@ None
 
 #### Returns
 
-- `String` - The version string of the skill (e.g., "1.2.3")
+- `ImutableString` - The version string of the skill (e.g., "1.2.3")
 
 #### Examples
 

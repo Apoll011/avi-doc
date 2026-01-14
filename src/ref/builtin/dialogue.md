@@ -15,15 +15,15 @@ Speaks the given text to the user.
 
 #### Signature
 
-```rhai
-fn say(text: String)
+```rust
+fn say(text: ImutableString)
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description           |
 |-----------|----------|-----------------------|
-| `text`    | `String` | The text to speak     |
+| `text`    | `ImutableString` | The text to speak     |
 
 #### Returns
 
@@ -31,7 +31,7 @@ Nothing
 
 #### Examples
 
-```js
+```rust
 on_intent "greeting" {
     dialogue::say("Hello! How can I help you today?");
 }
@@ -45,15 +45,15 @@ Speaks the given text only once per session. Subsequent calls with the same text
 
 #### Signature
 
-```rhai
-fn say_once(text: String)
+```rust
+fn say_once(text: ImutableString)
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description           |
 |-----------|----------|-----------------------|
-| `text`    | `String` | The text to speak     |
+| `text`    | `ImutableString` | The text to speak     |
 
 #### Returns
 
@@ -61,7 +61,7 @@ Nothing
 
 #### Examples
 
-```js
+```rust
 on_intent "tip_of_day" {
     dialogue::say_once("Did you know you can control your lights by voice?");
 }
@@ -77,7 +77,7 @@ Makes the device start listening for voice input.
 
 #### Signature
 
-```rhai
+```rust
 fn listen()
 ```
 
@@ -91,7 +91,7 @@ Nothing
 
 #### Examples
 
-```js
+```rust
 on_intent "start_dictation" {
     dialogue::say("I'm listening. Please speak now.");
     dialogue::listen();
@@ -106,7 +106,7 @@ Requests the user's attention with an audio cue and starts listening.
 
 #### Signature
 
-```rhai
+```rust
 fn request_attention()
 ```
 
@@ -120,7 +120,7 @@ Nothing
 
 #### Examples
 
-```js
+```rust
 on_timer "reminder" {
     dialogue::request_attention();
     dialogue::say("Your meeting starts in 5 minutes");
@@ -135,7 +135,7 @@ Repeats the last thing spoken or heard.
 
 #### Signature
 
-```rhai
+```rust
 fn repeat()
 ```
 
@@ -149,7 +149,7 @@ Nothing
 
 #### Examples
 
-```js
+```rust
 on_intent "repeat_request" {
     dialogue::repeat();
 }
@@ -165,16 +165,16 @@ Registers a handler for the next user response with validation.
 
 #### Signature
 
-```rhai
-fn on_reply(handler: String, validator: ?)
+```rust
+fn on_reply(handler: FnPtr, validator: Validator)
 ```
 
 #### Parameters
 
 | Parameter   | Type     | Description                                    |
 |-------------|----------|------------------------------------------------|
-| `handler`   | `String` | The name of the function to call with response |
-| `validator` | `?`      | The validator to use for the response          |
+| `handler`   | `FnPtr`  | The function to call with response             |
+| `validator` | `Validator`| The validator to use for the response          |
 
 #### Returns
 
@@ -182,10 +182,10 @@ Nothing
 
 #### Examples
 
-```js
+```rust
 on_intent "order_pizza" {
     dialogue::say("What size would you like?");
-    dialogue::on_reply("handle_size", dialogue::mapped_validator(#{
+    dialogue::on_reply(handle_size, dialogue::mapped_validator(#{
         "small": "small",
         "medium": "medium",
         "large": "large"
@@ -205,16 +205,16 @@ Asks the user a yes/no question and handles the response.
 
 #### Signature
 
-```rhai
-fn confirm(question_locale_id: String, handler: String)
+```rust
+fn confirm(question_locale_id: ImutableString, handler: ImutableString)
 ```
 
 #### Parameters
 
 | Parameter            | Type     | Description                           |
 |---------------------|----------|---------------------------------------|
-| `question_locale_id`| `String` | The locale ID of the question to ask  |
-| `handler`           | `String` | The name of the function to call      |
+| `question_locale_id`| `ImutableString` | The locale ID of the question to ask  |
+| `handler`           | `FnPtr`  | The function to call      |
 
 #### Returns
 
@@ -222,9 +222,9 @@ Nothing
 
 #### Examples
 
-```js
+```rust
 on_intent "delete_item" {
-    dialogue::confirm("confirm_delete", "handle_delete_confirm");
+    dialogue::confirm("confirm_delete", handle_delete_confirm);
 }
 
 fn handle_delete_confirm(confirmed) {
@@ -247,7 +247,7 @@ Creates a validator that accepts any input.
 
 #### Signature
 
-```rhai
+```rust
 fn any_validator() -> AnyValidator
 ```
 
@@ -257,7 +257,7 @@ fn any_validator() -> AnyValidator
 
 #### Examples
 
-```js
+```rust
 dialogue::say("Tell me anything");
 dialogue::on_reply("handle_response", dialogue::any_validator());
 ```
@@ -270,7 +270,7 @@ Creates a validator that accepts boolean input (yes/no).
 
 #### Signature
 
-```rhai
+```rust
 fn bool_validator(fuzzy: bool) -> BoolValidator
 ```
 
@@ -286,7 +286,7 @@ fn bool_validator(fuzzy: bool) -> BoolValidator
 
 #### Examples
 
-```js
+```rust
 dialogue::say("Do you want to continue?");
 dialogue::on_reply("handle_continue", dialogue::bool_validator(true));
 
@@ -305,7 +305,7 @@ Creates a validator that maps string input to values.
 
 #### Signature
 
-```rhai
+```rust
 fn mapped_validator(map: Map) -> MappedValidator
 ```
 
@@ -321,7 +321,7 @@ fn mapped_validator(map: Map) -> MappedValidator
 
 #### Examples
 
-```js
+```rust
 let color_map = #{
     "red": "ff0000",
     "blue": "0000ff",
@@ -340,7 +340,7 @@ Creates a validator that accepts values from a list or nothing.
 
 #### Signature
 
-```rhai
+```rust
 fn list_or_none_validator(allowed_values: Array) -> ListOrNoneValidator
 ```
 
@@ -356,7 +356,7 @@ fn list_or_none_validator(allowed_values: Array) -> ListOrNoneValidator
 
 #### Examples
 
-```js
+```rust
 let options = ["option1", "option2", "option3"];
 dialogue::say("Choose an option or say none");
 dialogue::on_reply("handle_choice", dialogue::list_or_none_validator(options));
@@ -370,7 +370,7 @@ Creates a validator wrapper that makes another validator optional.
 
 #### Signature
 
-```rhai
+```rust
 fn optional_validator() -> OptionalValidator
 ```
 
@@ -380,7 +380,7 @@ fn optional_validator() -> OptionalValidator
 
 #### Examples
 
-```js
+```rust
 dialogue::say("Enter a note, or say skip");
 dialogue::on_reply("handle_note", dialogue::optional_validator());
 ```
@@ -389,10 +389,10 @@ dialogue::on_reply("handle_note", dialogue::optional_validator());
 
 ## Complete Example: Multi-Turn Dialogue
 
-```js
+```rust
 on_intent "book_appointment" {
     dialogue::say("What day would you like?");
-    dialogue::on_reply("handle_day", dialogue::any_validator());
+    dialogue::on_reply(handle_day, dialogue::any_validator());
 }
 
 fn handle_day(day) {
@@ -400,14 +400,14 @@ fn handle_day(day) {
     context::set("appointment_day", day);
     
     dialogue::say("What time works for you?");
-    dialogue::on_reply("handle_time", dialogue::any_validator());
+    dialogue::on_reply(handle_time, dialogue::any_validator());
 }
 
 fn handle_time(time) {
     let day = context::get("appointment_day");
     
     dialogue::say(`Booking for ${day} at ${time}. Is this correct?`);
-    dialogue::on_reply("handle_confirm", dialogue::bool_validator(true));
+    dialogue::on_reply(handle_confirm, dialogue::bool_validator(true));
 }
 
 fn handle_confirm(confirmed) {
@@ -428,17 +428,17 @@ fn handle_confirm(confirmed) {
 
 ### 1. Use Appropriate Validators
 
-```js
+```rust
 // ✅ Good - constrained input for clear choices
-dialogue::on_reply("handler", dialogue::bool_validator(true));
+dialogue::on_reply(handler, dialogue::bool_validator(true));
 
 // ❌ Bad - any_validator for yes/no question
-dialogue::on_reply("handler", dialogue::any_validator());
+dialogue::on_reply(handler, dialogue::any_validator());
 ```
 
 ### 2. Provide Clear Prompts
 
-```js
+```rust
 // ✅ Good - clear options
 dialogue::say("Say small, medium, or large");
 
@@ -448,7 +448,7 @@ dialogue::say("What do you want?");
 
 ### 3. Handle Edge Cases
 
-```js
+```rust
 fn handle_response(value) {
     if value == () {
         dialogue::say("I didn't catch that. Please try again.");

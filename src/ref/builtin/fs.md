@@ -16,18 +16,18 @@ Reads the entire contents of a file as a string.
 #### Signature
 
 ```rhai
-fn read(path: String) -> String
+fn read(path: ImutableString) -> ImutableString
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                  |
 |-----------|----------|------------------------------|
-| `path`    | `String` | The path to the file to read |
+| `path`    | `ImutableString` | The path to the file to read |
 
 #### Returns
 
-- `String` - The file contents
+- `ImutableString` - The file contents
 - `UNIT` if the file could not be read
 
 #### Examples
@@ -58,15 +58,15 @@ Writes a string to a file, overwriting its contents.
 #### Signature
 
 ```rhai
-fn write(path: String, content: String)
+fn write(path: ImutableString, content: ImutableString)
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                   |
 |-----------|----------|-------------------------------|
-| `path`    | `String` | The path to the file to write |
-| `content` | `String` | The string to write           |
+| `path`    | `ImutableString` | The path to the file to write |
+| `content` | `ImutableString` | The string to write           |
 
 #### Returns
 
@@ -93,15 +93,15 @@ Appends a string to the end of a file.
 #### Signature
 
 ```rhai
-fn append(path: String, content: String)
+fn append(path: ImutableString, content: ImutableString)
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                    |
 |-----------|----------|--------------------------------|
-| `path`    | `String` | The path to the file           |
-| `content` | `String` | The string to append           |
+| `path`    | `ImutableString` | The path to the file           |
+| `content` | `ImutableString` | The string to append           |
 
 #### Returns
 
@@ -130,14 +130,14 @@ Checks if a path exists.
 #### Signature
 
 ```rhai
-fn exists(path: String) -> bool
+fn exists(path: ImutableString) -> bool
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description           |
 |-----------|----------|-----------------------|
-| `path`    | `String` | The path to check     |
+| `path`    | `ImutableString` | The path to check     |
 
 #### Returns
 
@@ -164,15 +164,15 @@ Copies a file from one path to another.
 #### Signature
 
 ```rhai
-fn copy(src: String, dest: String) -> bool
+fn copy(src: ImutableString, dest: ImutableString) -> bool
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description               |
 |-----------|----------|---------------------------|
-| `src`     | `String` | The source path           |
-| `dest`    | `String` | The destination path      |
+| `src`     | `ImutableString` | The source path           |
+| `dest`    | `ImutableString` | The destination path      |
 
 #### Returns
 
@@ -199,15 +199,15 @@ Moves or renames a file or directory.
 #### Signature
 
 ```rhai
-fn move(src: String, dest: String) -> bool
+fn move(src: ImutableString, dest: ImutableString) -> bool
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description               |
 |-----------|----------|---------------------------|
-| `src`     | `String` | The source path           |
-| `dest`    | `String` | The destination path      |
+| `src`     | `ImutableString` | The source path           |
+| `dest`    | `ImutableString` | The destination path      |
 
 #### Returns
 
@@ -232,14 +232,14 @@ Deletes a file or an empty directory.
 #### Signature
 
 ```rhai
-fn delete(path: String) -> bool
+fn delete(path: ImutableString) -> bool
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description           |
 |-----------|----------|-----------------------|
-| `path`    | `String` | The path to delete    |
+| `path`    | `ImutableString` | The path to delete    |
 
 #### Returns
 
@@ -265,14 +265,14 @@ Creates a directory and all its parent directories if they don't exist.
 #### Signature
 
 ```rhai
-fn mkdir(path: String) -> bool
+fn mkdir(path: ImutableString) -> bool
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                       |
 |-----------|----------|-----------------------------------|
-| `path`    | `String` | The path of the directory to create |
+| `path`    | `ImutableString` | The path of the directory to create |
 
 #### Returns
 
@@ -303,14 +303,14 @@ Lists the names of files and directories in a given path.
 #### Signature
 
 ```rhai
-fn list_files(path: String) -> Array
+fn list_files(path: ImutableString) -> Array
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description           |
 |-----------|----------|-----------------------|
-| `path`    | `String` | The path to list      |
+| `path`    | `ImutableString` | The path to list      |
 
 #### Returns
 
@@ -347,18 +347,18 @@ Gets the last component of a path (filename).
 #### Signature
 
 ```rhai
-fn basename(path: String) -> String
+fn basename(path: ImutableString) -> ImutableString
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description           |
 |-----------|----------|-----------------------|
-| `path`    | `String` | The path to process   |
+| `path`    | `ImutableString` | The path to process   |
 
 #### Returns
 
-- `String` - The last component of the path
+- `ImutableString` - The last component of the path
 
 #### Examples
 
@@ -379,18 +379,18 @@ Gets the parent directory of a path.
 #### Signature
 
 ```rhai
-fn dirname(path: String) -> String
+fn dirname(path: ImutableString) -> ImutableString
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description           |
 |-----------|----------|-----------------------|
-| `path`    | `String` | The path to process   |
+| `path`    | `ImutableString` | The path to process   |
 
 #### Returns
 
-- `String` - The parent directory of the path
+- `ImutableString` - The parent directory of the path
 
 #### Examples
 

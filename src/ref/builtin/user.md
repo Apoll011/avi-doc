@@ -16,7 +16,7 @@ Gets the user's name.
 #### Signature
 
 ```rhai
-fn name() -> String
+fn name() -> ImutableString
 ```
 
 #### Parameters
@@ -25,7 +25,7 @@ None
 
 #### Returns
 
-- `String` - The user's name, or an empty string if not available
+- `ImutableString` - The user's name, or an empty string if not available
 
 #### Examples
 
@@ -58,7 +58,7 @@ None
 
 #### Returns
 
-- `String` - The user's nickname
+- `ImutableString` - The user's nickname
 - `()` if not set
 
 #### Examples
@@ -92,7 +92,7 @@ None
 
 #### Returns
 
-- `String` - The user's ID
+- `ImutableString` - The user's ID
 - Empty string if not available
 
 #### Examples
@@ -149,7 +149,7 @@ Gets the user's language preference.
 #### Signature
 
 ```rhai
-fn language() -> String
+fn language() -> ImutableString
 ```
 
 #### Parameters
@@ -158,7 +158,7 @@ None
 
 #### Returns
 
-- `String` - The language code (e.g., "en", "es", "fr"), defaults to "en" if not set
+- `ImutableString` - The language code (e.g., "en", "es", "fr"), defaults to "en" if not set
 
 #### Examples
 
@@ -263,7 +263,7 @@ None
 
 #### Returns
 
-- `String` - The voice profile ID
+- `ImutableString` - The voice profile ID
 - `()` if not set
 
 #### Examples

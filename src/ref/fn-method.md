@@ -170,7 +170,7 @@ defined with a restriction on the type of object pointed to by `this`:
 
 ```js
 ┌────────────────┐
-│ my_module.rhai │
+│ my_module.avi │
 └────────────────┘
 
 // This is a typed method function requiring 'this' to be an integer.
@@ -182,7 +182,7 @@ fn int.change_value(offset) {
 
 
 ┌───────────┐
-│ main.rhai │
+│ main.avi │
 └───────────┘
 
 use "my_module";

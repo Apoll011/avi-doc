@@ -16,16 +16,16 @@ A [module](index.md) can be _imported_ via the `import` statement, and be given 
 Its members can be accessed via `::` similar to C++.
 
 ```js
-use "crypto_banner";         // run the script file 'crypto_banner.rhai' without creating an imported module
+use "crypto_banner";         // run the script file 'crypto_banner.avi' without creating an imported module
 
-import "crypto" as lock;        // run the script file 'crypto.rhai' and import it as a module named 'lock'
-import "crypto";        // run the script file 'crypto.rhai' and import it as a module named 'crypto'
+import "crypto" as lock;        // run the script file 'crypto.avi' and import it as a module named 'lock'
+import "crypto";        // run the script file 'crypto.avi' and import it as a module named 'crypto'
 
 const SECRET_NUMBER = 42;
 
 let mod_file = `crypto_${SECRET_NUMBER}`;
 
-import mod_file as my_mod;      // load the script file "crypto_42.rhai" and import it as a module named 'my_mod'
+import mod_file as my_mod;      // load the script file "crypto_42.avi" and import it as a module named 'my_mod'
                                 // notice that module path names can be dynamically constructed!
                                 // any expression that evaluates to a string is acceptable after the 'import' keyword
 
@@ -93,7 +93,7 @@ For instance, importing itself always causes an infinite recursion:
 
 ```js
 ┌────────────┐
-│ hello.rhai │
+│ hello.avi │
 └────────────┘
 
 import "hello" as foo;          // import itself - infinite recursion!
@@ -105,7 +105,7 @@ foo::do_something();
 
 ```js
 ┌────────────┐
-│ hello.rhai │
+│ hello.avi │
 └────────────┘
 
 import "world" as foo;
@@ -113,7 +113,7 @@ foo::do_something();
 
 
 ┌────────────┐
-│ world.rhai │
+│ world.avi │
 └────────────┘
 
 import "hello" as bar;

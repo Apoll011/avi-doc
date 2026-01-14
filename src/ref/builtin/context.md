@@ -18,14 +18,14 @@ Retrieves a value from the skill's persistent context storage.
 #### Signature
 
 ```rust
-fn get(key: String) -> ?
+fn get(key: ImmutableString) -> Any
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                           |
 |-----------|----------|---------------------------------------|
-| `key`     | `String` | The key of the value to retrieve      |
+| `key`     | `ImmutableString` | The key of the value to retrieve      |
 
 #### Returns
 
@@ -110,14 +110,14 @@ Checks whether a key exists in the skill's persistent context.
 #### Signature
 
 ```rust
-fn has(key: String) -> bool
+fn has(key: ImmutableString) -> bool
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description              |
 |-----------|----------|--------------------------|
-| `key`     | `String` | The key to check         |
+| `key`     | `ImmutableString` | The key to check         |
 
 #### Returns
 
@@ -193,15 +193,15 @@ Stores a value in the skill's persistent context with optional TTL and persisten
 #### Signature
 
 ```rust
-fn set(key: String, value: ?, ttl: u64, persist: bool)
+fn set(key: ImmutableString, value: Any, ttl: u64, persist: bool)
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                                          |
 |-----------|----------|------------------------------------------------------|
-| `key`     | `String` | The key to store the value under                     |
-| `value`   | `?`      | The value to store (any type)                        |
+| `key`     | `ImmutableString` | The key to store the value under            |
+| `value`   | `Any`    | The value to store (any type)                        |
 | `ttl`     | `u64`    | Time-to-live in seconds (0 = no expiration)          |
 | `persist` | `bool`   | Whether to persist across sessions and restarts      |
 
@@ -315,14 +315,14 @@ Removes a value from the skill's persistent context storage.
 #### Signature
 
 ```rust
-fn remove(key: String)
+fn remove(key: ImmutableString)
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                    |
 |-----------|----------|--------------------------------|
-| `key`     | `String` | The key of the value to remove |
+| `key`     | `ImmutableString` | The key of the value to remove |
 
 #### Returns
 

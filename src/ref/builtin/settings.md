@@ -18,14 +18,14 @@ Gets a setting value for the current skill.
 #### Signature
 
 ```rhai
-fn get(name: String) -> ?
+fn get(name: ImutableString) -> ?
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                  |
 |-----------|----------|------------------------------|
-| `name`    | `String` | The name of the setting      |
+| `name`    | `ImutableString` | The name of the setting      |
 
 #### Returns
 
@@ -62,14 +62,14 @@ Checks if a setting exists for the current skill.
 #### Signature
 
 ```rhai
-fn has(name: String) -> bool
+fn has(name: ImutableString) -> bool
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                  |
 |-----------|----------|------------------------------|
-| `name`    | `String` | The name of the setting      |
+| `name`    | `ImutableString` | The name of the setting      |
 
 #### Returns
 
@@ -104,14 +104,14 @@ Gets the full setting object including metadata.
 #### Signature
 
 ```rhai
-fn full(name: String) -> SettingNamed
+fn full(name: ImutableString) -> SettingNamed
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                  |
 |-----------|----------|------------------------------|
-| `name`    | `String` | The name of the setting      |
+| `name`    | `ImutableString` | The name of the setting      |
 
 #### Returns
 
@@ -316,7 +316,7 @@ let enabled = settings::get("feature_enabled"); // true/false
 // Numeric settings (volume, timeout, etc.)
 let volume = settings::get("volume_level"); // 0-100
 
-// String settings (themes, paths, etc.)
+// ImutableString settings (themes, paths, etc.)
 let theme = settings::get("ui_theme"); // "dark", "light", etc.
 
 // List/Array settings (allowed values)

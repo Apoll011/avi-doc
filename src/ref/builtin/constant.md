@@ -18,14 +18,14 @@ Retrieves the value of a named constant defined for the current skill.
 #### Signature
 
 ```rust
-fn get(name: String) -> ?
+fn get(name: ImmutableString) -> Any
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                        |
 |-----------|----------|------------------------------------|
-| `name`    | `String` | The name of the constant to retrieve |
+| `name`    | `ImmutableString` | The name of the constant to retrieve |
 
 #### Returns
 
@@ -102,14 +102,14 @@ Checks whether a constant with the given name exists for the current skill.
 #### Signature
 
 ```rust
-fn has(name: String) -> bool
+fn has(name: ImmutableString) -> bool
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description                      |
 |-----------|----------|----------------------------------|
-| `name`    | `String` | The name of the constant to check |
+| `name`    | `ImmutableString` | The name of the constant to check |
 
 #### Returns
 
@@ -171,7 +171,7 @@ Returns all constants available for the current skill as a key-value map.
 #### Signature
 
 ```rust
-fn list() -> HashMap<String, ?>
+fn list() -> HashMap<ImmutableString, Any>
 ```
 
 #### Parameters
@@ -180,13 +180,13 @@ None
 
 #### Returns
 
-- `HashMap<String, ?>` - A map where keys are constant names and values are their corresponding values
+- `HashMap<ImmutableString, Any>` - A map where keys are constant names and values are their corresponding values
 - Empty map if no constants are defined
 
 #### Behavior
 
 - Returns a snapshot of all defined constants
-- Values can be of any type (string, number, boolean, object, etc.)
+- Values can be of any type (ImmutableString, number, boolean, object, etc.)
 - The returned map is a copy; modifying it does not affect the actual constants
 
 #### Examples

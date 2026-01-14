@@ -28,14 +28,14 @@ Logs a trace-level message for detailed debugging.
 #### Signature
 
 ```rhai
-fn trace(text: String)
+fn trace(text: ImutableString)
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description           |
 |-----------|----------|-----------------------|
-| `text`    | `String` | The message to log    |
+| `text`    | `ImutableString` | The message to log    |
 
 #### Returns
 
@@ -57,14 +57,14 @@ Logs a debug-level message.
 #### Signature
 
 ```rhai
-fn debug(text: String)
+fn debug(text: ImutableString)
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description           |
 |-----------|----------|-----------------------|
-| `text`    | `String` | The message to log    |
+| `text`    | `ImutableString` | The message to log    |
 
 #### Returns
 
@@ -86,14 +86,14 @@ Logs an informational message.
 #### Signature
 
 ```rhai
-fn info(text: String)
+fn info(text: ImutableString)
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description           |
 |-----------|----------|-----------------------|
-| `text`    | `String` | The message to log    |
+| `text`    | `ImutableString` | The message to log    |
 
 #### Returns
 
@@ -115,14 +115,14 @@ Logs a warning message.
 #### Signature
 
 ```rhai
-fn warn(text: String)
+fn warn(text: ImutableString)
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description           |
 |-----------|----------|-----------------------|
-| `text`    | `String` | The message to log    |
+| `text`    | `ImutableString` | The message to log    |
 
 #### Returns
 
@@ -144,14 +144,14 @@ Logs an error message.
 #### Signature
 
 ```rhai
-fn error(text: String)
+fn error(text: ImutableString)
 ```
 
 #### Parameters
 
 | Parameter | Type     | Description           |
 |-----------|----------|-----------------------|
-| `text`    | `String` | The message to log    |
+| `text`    | `ImutableString` | The message to log    |
 
 #### Returns
 
